@@ -30,7 +30,7 @@ bool NRECToolPathHander::Excuting(const std::wstring & toolPathName, double leng
 {
 	std::vector<std::vector<XYZIJK>> passVec;
 
-	if (ReadPassFile(toolPathName, passVec)) 
+	if (!ReadPassFile(toolPathName, passVec)) 
 		return false;
 
 	ENTITY_LIST ball_cente_list;//球心点集合
